@@ -1,6 +1,19 @@
 import React from "react";
+import People from "./People";
 
-const List = (props) =>  <h1>List is getting ready</h1>
+const List = (props) =>  
+<div className="List-container">
+   { props.characters.map(character => ( 
+       <People  name={character.name}
+                occupation= {character.occupation}
+                img={character.img}
+                status={character.status}
+                nickname={character.nickname}
+                key={character.char_id}
+                />
+   ))
+   }
+</div>
     
     
 
