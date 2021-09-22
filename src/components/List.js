@@ -3,7 +3,11 @@ import People from "./People";
 
 const List = (props) =>  
 <>
-    <button onClick={props.showSurviovers}>Show Surviovers</button>
+    {props.isAlive
+    ? <button className= "survs-button"  onClick={props.showPeople}>Show Everybody</button>
+    : <button className= "survs-button"  onClick={props.showPeople}>Show Surviovers</button>
+    }
+    
 <div className="list-container">
    { props.characters.map(character => ( 
        <People  name={character.name}
