@@ -39,6 +39,15 @@
 
 
 
+.header {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 15px;
+}
+
+
 
 .list-container {
   display: flex;
@@ -60,5 +69,5 @@
 .char-wrapper img{
   width: 200px;
   height: 220px;
-
+  object-fit: fill;
 }

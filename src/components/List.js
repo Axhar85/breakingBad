@@ -2,6 +2,8 @@ import React from "react";
 import People from "./People";
 
 const List = (props) =>  
+<>
+    <button onClick={props.showSurviovers}>Show Surviovers</button>
 <div className="list-container">
    { props.characters.map(character => ( 
        <People  name={character.name}
@@ -15,6 +17,6 @@ const List = (props) =>
    }
 </div>
     
-    
+</>
 
 export default List;
