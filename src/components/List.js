@@ -2,7 +2,7 @@ import React from "react";
 import People from "./People";
 
 const List = (props) =>  
-<div className="List-container">
+<div className="list-container">
    { props.characters.map(character => ( 
        <People  name={character.name}
                 occupation= {character.occupation}
