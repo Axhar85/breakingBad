@@ -29,6 +29,12 @@ function App() {
       setIsAlive(true)
     }
 
+  };
+
+  const killCharacter = (index) => {
+      let newCharacters = [...data]
+      newCharacters[index].status = 'Deceased'
+      setData(newCharacters)
   }
 
   return (
@@ -40,6 +46,7 @@ function App() {
           showPeople ={showPeople} 
           characters={data}
           isAlive={isAlive}
+          killCharacter={killCharacter}
           /> :
          <h3>Loading ... </h3>
     }

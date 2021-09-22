@@ -1,14 +1,17 @@
 import React from "react";
 
-const People = (props) =>  ( 
+const People = ({name, nickname, img, status, index, killCharacter}) =>  ( 
     <div className='char-wrapper'>
-        <h1> {props.name} </h1>
-        <h2> {props.nickname} </h2>
+        <h1> {name} </h1>
+        <h2> {nickname} </h2>
         {/*<ul> {props.occupation.map(job => <li> {job} </li>)} </ul>*/}
-        <img src={props.img} alt={`pictures of ${props.name}`} />
-        <p> currently (spoiler) {props.status} </p>
+        <img src={img} alt={`pictures of ${name}`} />
+        <p> currently (spoiler) {status} </p>
+        {
+            status !== 'Deceased'
+             && <button onClick={() => killCharacter(index)}>KILL!</button>
+            
+        }
     </div>
-    
-   
 )
 export default People;
